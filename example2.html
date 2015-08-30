@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anuj Angular jS Learning</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    </head>
+    <body ng-app ng-init="cost=10;qty=5">
+        <div>This tells the use of ng-bind, It bind the html element to expression.</div>
+    
+    <input ng-model="cost" id="cost" type="text">
+    <input ng-model="qty" id="qty" type="text">
+    
+    <p> The total is:-</p>
+    {{cost*qty |currency}}
+    
+    <p>This is bind to value of textbox</p>
+    
+    <span ng-bind="name"></span>
+   </body> 
+</html>

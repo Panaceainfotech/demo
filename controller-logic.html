@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anuj Angular jS Learning</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+      
+        <script>
+            var module1=angular.module('mynewapp',[]);
+            module1.controller('newController',function ($scope)
+            {
+                $scope.cost="10";
+                $scope.qty="5"
+                $scope.checkAlert=function()
+                {
+                    alert('Hi i am here');
+                }
+                $scope.currencies=['USD','EUR','CNY'];
+                $scope.checklist= [
+                    {
+                      CompanyName: "panacea",
+                      CustomerID: "e64"
+                    },
+                    {
+                      CompanyName: "panacea1",
+                      CustomerID: "e65"
+                    }
+                    ];
+                    $scope.usdToForeignRates = {
+                    USD: 1,
+                    EUR: 0.74,
+                    CNY: 6.09
+                  };
+            });
+        </script>
+    </head>
+    <body ng-app="mynewapp">
+        <div ng-controller="newController">
+            <input type="text" ng-model="cost">
+            <input type="text" ng-model="qty">
+            <select name='currency'>
+                <option ng-repeat="currency in currencies">{{currency}}</option>
+            </select>
+            <select name='check'>
+                <option ng-repeat="check in checklist">{{check.CompanyName}}</option>
+            </select>
+            <input type="button" value="Calculate" ng-click="checkAlert();"/>
+        </div>
+        
+    </body>
+    

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="anujApp">
+    <head>
+        <title>Anuj Angular jS Learning</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+        <script>
+            var moduletext=angular.module('anujApp',[]);
+            moduletext.controller("setMyText",function($scope)
+            {
+                $scope.first_name="Anuj";
+            $scope.last_name="Tyagi";
+            
+
+            });
+       
+        </script>
+    </head>
+    <body >
+        <div ng-controller="setMyText">  
+        <div>Simple example using ng-mode and angular expression.</div>
+        <input ng-model="first_name" id="first_name" type="text">
+        
+        <input ng-model="last_name" id="last_name" type="text">
+
+        <p>You are typing the following text:-</p>
+        {{first_name}} {{last_name}}
+        </div>
+       </body> 
+
+</html>
+
